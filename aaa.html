@@ -1,0 +1,136 @@
+﻿<html>
+<head>
+<title>株式会社●●派遣社員登録票</title>
+<script type="text/javascript">
+	function fnc(){
+		document.getElementById("text").innerHTML=""
+		if(document.getElementById("na1").value=="")
+		{
+			document.getElementById("text").innerHTML+="氏名(性)が未入力です。"+"<br>";
+		}
+		if(document.getElementById("na2").value=="")
+		{
+			document.getElementById("text").innerHTML+="氏名(名)が未入力です。"+"<br>";
+		}
+		if(/^[ァ-ン]$/.test(document.getElementById("na3").value==""))
+		{
+		document.getElementById("text").innerHTML+="フリガナ(性)が未入力です。"+"<br>";
+		}
+		if(document.getElementById("na4").value=="")
+		{
+			document.getElementById("text").innerHTML+="フリガナ(名)が未入力です。"+"<br>";
+		}
+
+		flg=0;
+		for(i=0;i<document.f.sei.length;i++)
+		{
+			if(document.f.sei[i].checked)
+			{
+				flg=1;
+			}
+		}
+		if(!flg)
+		{
+			document.getElementById("text").innerHTML+="性別にチェックを入れてください。"+"<br>"
+		}
+		
+
+		
+	
+	}
+	
+
+</script>
+<style type="text/css">  
+
+#wapper{
+	margin:auto;
+	width:500px;
+	
+}
+h1{
+	text-align:center;
+}
+span{
+	color:#F00;
+	font-size:80%;
+}
+h3{
+	color:#F00;
+	font-size:80%;
+	margin-left:30px;
+}
+
+#haba{
+	width:120px;
+}
+
+</style>
+</head>
+<body>
+<div id="wapper">
+<h1>株式会社○○派遣社員登録票</h1>
+<h3>※は必須項目です。数字は半角でご入力ください。</h3>
+<div id="text"></div>
+<form name="f">
+	<table border="1" align="center">
+	<tr>
+		<td id="haba">氏名<span>※</span></td><td>性<input type="text" size="10" maxlength="5" name="na" id="na1">名<input type="text" size="10" maxlength="6" name="na" id="na2"></td>
+	</tr>
+	<tr>
+		<td>フリガナ<span>※</span></td><td>性<input type="text" size="10" maxlength="8" name="na" id="na3">名<input type="text" size="10" maxlength="8" name="na" id="na4"></td>
+	</tr>
+    <tr>
+    	<td>性別<span>※</span></td><td><label><input type="radio" name="sei">男性</label><label><input type="radio" name="sei">女性</label></td>
+    </tr>
+	<tr>
+		<td rowspan="2">住所<span>※</span></td><td>〒<input type="text" size="3" maxlength="3" name="yuu">-<input type="text" size="4" maxlength="4" name="yuu">　　<select name="todouhuken"><option value="todouhuken" selected>都道府県</option><option value="hokkai">北海道</option><option value="aomori">青森県</option><option value="akita">秋田県</option><option value="iwate">岩手県</option><option value="yamagata">山形県</option><option value="miyagi">宮城県</option><option value="hukusima">福島県</option><option value="ibaraki">茨城県</option><option value="totigi">栃木県</option><option value="gunnma">群馬県</option><option value="saitama">埼玉県</option><option value="kanagawa">神奈川県</option><option value="tiba">千葉県</option><option value="toukyou">東京都</option><option value="yamanasi">山梨県</option><option value="nagano">長野県</option><option value="niigata">新潟県</option><option value="toyama">富山県</option><option value="isikawa">石川県</option><option value="hukui">福井県</option><option value="gihu">岐阜県</option><option value="sizuoka">静岡県</option><option value="aiti">愛知県</option><option value="mie">三重県</option><option value="siga">滋賀県</option><option value="kyouto">京都府</option><option value="oosaka">大阪府</option><option value="hyogo">兵庫県</option><option value="nara">奈良県</option><option value="wakayama">和歌山県</option><option value="tottori">鳥取県</option><option value="simane">島根県</option><option value="oakayama">岡山県</option><option value="hirosima">広島県</option><option value="yamaguti">山口県</option><option value="tokusima">徳島県</option><option value="kagawa">香川県</option><option value="ehime">愛媛県</option><option value="kouti">高知県</option><option value="hukuoka">福岡県</option><option value="saga">佐賀県</option><option value="nagasaki">長崎県</option><option value="kumamoto">熊本県</option><option value="ooita">大分県</option><option value="miyazaki">宮崎県</option><option value="kakgosima">鹿児島県</option><option value="okinawa">沖縄県</option></select></td>
+	</tr>
+	<tr>
+		<td><input type="text" size="50"  maxlength="60" value="都道府県以下の住所をご記入ください。" name="zyuu"></td>
+	</tr>
+	<tr>
+		<td>生年月日<span>※</span></td><td>西暦<input type="text" size="4" maxlength="4">年<select name="tuki"><option value="tuki" selected>1月</option><option value="tuki" selected>2月</option><option value="tuki" selected>3月</option><option value="tuki" selected>4月</option><option value="tuki" selected>5月</option><option value="tuki" selected>6月</option><option value="tuki" selected>7月</option><option value="tuki" selected>8月</option><option value="tuki" selected>9月</option><option value="tuki" selected>10月</option><option value="tuki" selected>11月</option><option value="tuki" selected>12月</option></select><input type="text" size="2" maxlength="2" name="tan">日生</td>
+	</tr>
+    <tr>
+    <td>電話番号</td><td><input type="text" size="5" maxlength="4">-<input type="text" size="5" maxlength="4">-<input type="text" size="5" maxlength="4"></td>
+    </tr>
+    <tr>
+    <td>携帯番号<span>※</span></td><td><input type="text" size="5" maxlength="3" name="tel" >-<input type="text" size="5" maxlength="4" name="tel" >-<input type="text" size="5" maxlength="4" name="tel"></td>
+    </tr>
+    <tr>
+    <td>FAX番号</td><td><input type="text" size="5" maxlength="4">-<input type="text" size="5" maxlength="4">-<input type="text" size="5" maxlength="4"></td>
+    </tr>
+    <tr>
+    <td>メールアドレス</td><td><input type="text" size="50" maxlength="50"></td>
+    </tr>
+    <tr>
+    <td>希望連絡方法<span>※</span></td><td><label><input type="checkbox" name="ren">電話</label><label><input type="checkbox" name="ren" checked>携帯電話</label><label><input type="checkbox" name="ren">FAX</label><label><input type="checkbox" name="ren">メール</label><br>※複数回答可</td>
+    </tr>
+    <tr>
+    <td>連絡可能時間<span>※</span></td><td><input type="text" size="50" maxlength="50" value="※複数時間入力可" name="renkazi" required></td>
+    </tr>
+    <tr>
+    <td>結婚<span>※</span></td><td><label><input type="radio" name="ke" >既婚</label><label><input type="radio" name="ke">未婚</label></td>
+    </tr>
+    <tr>
+    <td>扶養家族<span>※</span></td><td><label><input type="radio" name="hu">有(人数：<input type="text" size="2">)</label><label><input type="radio" name="hu">無</label></td>
+    </tr>
+    <tr>
+    <td>通勤手段<span>※</span></td><td><input type="text" size="30" name="syu"></td>
+    </tr>
+    <tr>
+    <td>通勤時間<span>※</span></td><td><input type="text" size="2" name="tuuzi">時間<input type="text" size="2" name="tuuzi">分</td>
+    </tr>
+    <tr>
+    <td>最寄り駅<span>※</span></td><td><input type="text" name="eki" size="10" maxlength="10" name="moyori">線<input type="text" name="eki" size="10" maxlength="15" name="moyori">駅</td>
+    </tr>
+    <tr>
+    <td>出勤可能曜日<span>※</span></td><td><label><input type="checkbox" name="syu">月</label><label><input type="checkbox" name="syu">火</label><label><input type="checkbox" name="syu">水</label><label><input type="checkbox" name="syu">木</label><label><input type="checkbox" name="syu">金</label><label><input type="checkbox" name="syu">土</label><label><input type="checkbox" name="syu">日</label></td>
+    </tr>
+</table>
+<p align="center"><input type="submit" value="送信" onClick="fnc();">　　<input type="reset" value="全項目リセット"></p>
+</form>
+</div>
+</body>
+</html>
